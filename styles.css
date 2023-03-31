@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --TXT-COLOR: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: black;
+  font-family: "Alkatra", cursive;
+  background-color: whitesmoke;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  border: 1px solid black;
+  border-bottom: 5px solid gold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 2 1 auto;
+  padding: 1rem;
+  background-image: linear-gradient(to right, #7f00ff, #e100ff);
+  z-index: 1;
+}
+
+.company-name {
+  /* border: 1px solid black; */
+  margin-left: 2rem;
+  transition: all 0.6s;
+  padding: 10px;
+  color: var(--TXT-COLOR);
+}
+
+.company-name:hover {
+  /* font-size: 1.5rem; */
+  transform: translateX(30px);
+}
+
+.text-folio {
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 2rem;
+  color: gold;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.navigation p {
+  margin: 0 1rem;
+}
+
+.li-animation {
+  position: relative;
+  color: var(--TXT-COLOR);
+  /* border: 1px solid white; */
+  transition: all 0.5s;
+}
+
+.li-animation:hover {
+  color: gold;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.li-animation div {
+  position: absolute;
+  bottom: 5px;
+  height: 1px;
+  background-color: white;
+  transform: translateX(10%);
+  transition: all 0.8s;
+}
+
+.li-animation:hover div {
+  transform: translateX(0%);
+  width: 100%;
+}
+
+.hero {
+  background-image: url("https://cdn.pixabay.com/photo/2016/11/19/00/12/wave-1837426_1280.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  display: grid;
+  place-content: center;
+  padding-top: 10%;
+  color: black;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.project-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 2rem;
+}
+
+.projects {
+  background-image: url("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20%;
+  height: 300px;
+  border: 1px solid black;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  color: gold;
+  /* background-image: linear-gradient(to right, #7f00ff, #e100ff); */
+  overflow: hidden;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  transition: all 0.5s;
+}
+
+.projects:hover {
+  transform: scale(1.2, 1.2);
+}
+.projects h3 {
+  text-decoration: underline;
+}
+
+.curtains {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: all 0.7s;
+}
+
+.projects:hover .curtains {
+  transform: translateY(0%);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+button {
+  width: 100px;
+  padding: 5px 20px;
+  font-weight: lighter;
+  text-align: center;
+  background-color: gold;
+  border: none;
+  border-radius: 12px;
+}
+
+button:hover {
+  color: var(--TXT-COLOR);
+  background-color: transparent;
+  outline: 2px solid gold;
+}
+button:hover a {
+  color: var(--TXT-COLOR);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.connections h2,
+p {
+  text-align: center;
+}
+
+.connections {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding-top: 20px;
+  color: var(--TXT-COLOR);
+  border-bottom: 5px solid gold;
+  background-image: linear-gradient(to right, #7f00ff, #e100ff);
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 30px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+
+i {
+  margin-right: 10px;
+}
+.fa-facebook,
+.fa-github,
+.fa-twitter,
+.fa-envelope,
+.fa-phone {
+  transition: all 0.3s;
+}
+.fa-facebook:hover {
+  color: dodgerblue;
+  transform: scale(1.7, 1.7);
+  cursor: pointer;
+}
+
+.fa-github:hover {
+  color: black;
+  transform: scale(1.7, 1.7);
+  cursor: pointer;
+}
+
+.fa-twitter:hover {
+  color: dodgerblue;
+  transform: scale(1.7, 1.7);
+  cursor: pointer;
+}
+
+.fa-envelope:hover {
+  color: red;
+  transform: scale(1.7, 1.7);
+  cursor: pointer;
+}
+
+.fa-phone:hover {
+  color: green;
+  transform: scale(1.7, 1.7);
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  background-image: linear-gradient(to right, #7f00ff, #e100ff);
+  color: var(--TXT-COLOR);
+}
